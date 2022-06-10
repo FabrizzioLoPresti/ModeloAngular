@@ -1,0 +1,23 @@
+<div class="container">
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Rol</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of listaUsuarios">
+        <td>{{user.nombre}}</td>
+        <td>{{user.apellido}}</td>
+        <td>{{user.rol}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="editUser(user.id)">Editar</button>
+          <button class="btn btn-danger" (click)="eliminarUsuario(user.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

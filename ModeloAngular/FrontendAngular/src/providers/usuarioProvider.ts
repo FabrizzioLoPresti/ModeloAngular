@@ -28,4 +28,10 @@ export class UsuarioProvider {
     const header = { 'Content-Type': 'application/json' };
     return this.http.get(url, { headers: header });
   }
+
+  deleteUsuario(id: string): Observable<any> {
+    const url = this.apiUrl + 'api/usuarios/deleteFisico/' + id;
+    const header = { 'Content-Type': 'application/json' };
+    return this.http.delete(url, { headers: header });
+  }
 }

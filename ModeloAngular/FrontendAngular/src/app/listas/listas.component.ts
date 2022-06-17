@@ -33,6 +33,13 @@ export class ListasComponent implements OnInit {
   }
 
   async eliminarUsuario(userId: any) {
-    console.log(userId);
+    const respuesta = await this.usuarioProvider.deleteUsuario(userId).subscribe((data) => {
+      if(data.ok) {
+        alert("Usuario eliminado");
+        this.obtenerUsuarios();
+      } else {
+        alert(data.error);
+      }
+    });
   }
 }

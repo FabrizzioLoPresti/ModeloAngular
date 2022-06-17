@@ -9,8 +9,10 @@ import { LoginComponent } from './login/login.component';
 
 import { FormsModule } from '@angular/forms';
 import { UsuarioProvider } from '../providers/usuarioProvider';
+import { RolesProvider } from '../providers/rolesProvider';
 import { HttpClientModule } from '@angular/common/http';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     ParrafoEjemploComponent,
     ListasComponent,
     LoginComponent,
-    EditarUsuarioComponent
+    EditarUsuarioComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     HttpClientModule
   ],
   providers: [
-    UsuarioProvider
+    UsuarioProvider,
+    RolesProvider
   ],
   bootstrap: [AppComponent]
 })
